@@ -1,0 +1,358 @@
+
+.root {
+    -fx-font-family: "Roboto";
+}
+
+.side-menu{
+    -fx-padding: 20.0,10.0;
+    -fx-font-size: 15.0;
+    -fx-font-weight: NORMAL;
+    -fx-text-fill: #444;
+}
+.title-label{
+    -fx-font-size: 30.0px;
+    -fx-padding	: 14.0px;
+    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX Button                                                                   *
+*                                                                              *
+*******************************************************************************/
+
+
+.custom-jfx-button-raised .jfx-rippler{
+    -fx-rippler-fill: YELLOW;
+}
+
+.custom-jfx-button-raised  {
+    -fx-font-size: 14.0px;
+    -fx-button-type: RAISED;
+    -fx-background-color: rgb(102.0,153.0,102.0);
+    -fx-text-fill: WHITE;
+}
+
+
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Dialog Layout                                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+.jfx-dialog-overlay-pane {
+    -fx-background-color: rgba(0.0,0.0,0.0,0.1);
+}
+
+.dialog-trigger{
+    -fx-background-color: WHITE;
+    -fx-button-type:RAISED;
+    -fx-font-size: 14.0px;
+}
+
+.jfx-dialog-layout {
+    -fx-padding: 24.0px 24.0px 16.0px 24.0px;
+    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
+}
+.jfx-layout-heading {
+    -fx-font-size: 20.0px;
+    -fx-font-weight: BOLD;
+    -fx-alignment: center-left;
+    -fx-padding: 5.0 0.0 5.0 0.0;
+}
+
+.jfx-layout-body .label {
+    -fx-font-size: 14.0px;
+    -fx-pref-width: 400.0px;
+    -fx-wrap-text: true;
+}
+
+.jfx-layout-actions {
+    -fx-padding: 10.0px 0.0 0.0 0.0 ;
+    -fx-alignment: center-right ;
+}
+.dialog-accept{
+    -fx-text-fill: #03A9F4;
+    -fx-font-weight: BOLD;
+    -fx-padding: 0.7em 0.8em;
+}
+
+
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Radio Button                                                            *
+ *                                                                             *
+ ******************************************************************************/
+
+.jfx-radio-button .radio {
+    -fx-stroke-width: 2.0px;
+    -fx-fill: transparent;
+}
+
+.jfx-radio-button .dot {
+    -fx-fill: #0F9D58;
+}
+
+.custom-jfx-radio-button{
+    -fx-font-size: 16.0px;
+}
+
+.custom-jfx-radio-button .radio {
+    -fx-stroke-width: 2.0px;
+    -fx-fill: transparent;
+}
+
+.custom-jfx-radio-button .dot {
+    -fx-fill: #5264AE;
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Textfield                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-text-field, .jfx-password-field, .jfx-text-area{
+    -fx-background-color: transparent ;
+    -fx-font-weight: BOLD;
+    -fx-prompt-text-fill: #808080;
+    -fx-alignment: top-left ;
+    /*-fx-max-width: 300.0;*/
+    -fx-pref-width:300.0;
+    -fx-focus-color: #4059A9;
+    -fx-unfocus-color: #4d4d4d;
+}
+
+.jfx-text-field:error , .jfx-password-field:error , .jfx-text-area:error {
+    -fx-focus-color: #D34336;
+    -fx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .errorLabel, .jfx-password-field .errorLabel, .jfx-text-area .errorLabel{
+    -fx-text-fill : #D34336;
+    -fx-font-size: 0.75em;
+}
+.jfx-text-field .errorIcon, .jfx-password-field .errorIcon , .jfx-text-area .errorIcon{
+    -fx-text-fill : #D34336;
+    -fx-font-size: 1.0em;
+}
+
+.jfx-text-area .viewport{
+    -fx-background-color: #F4F4F4;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX List View                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-list-cell {
+    -fx-background-insets: 0.0 ;
+    -fx-text-fill: BLACK;
+}
+.jfx-list-cell:odd,
+.jfx-list-cell:even {
+    -fx-background-color:  WHITE;
+}
+.jfx-list-cell:filled:hover {
+    -fx-text-fill: black;
+}
+
+.jfx-list-cell .jfx-rippler {
+    -fx-rippler-fill: #5264AE;
+}
+
+.jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.jfx-list-cell:even:selected > .jfx-rippler > StackPane{
+    -fx-background-color: rgba(0.0,0.0,255.0,0.2);
+}
+
+.jfx-list-view {
+    -fx-background-insets: 0.0;
+    -fx-cell-horizontal-margin: 0.0;
+    -fx-cell-vertical-margin: 5.0;
+    -fx-vertical-gap : 10.0;
+    -fx-expanded : false;
+}
+
+.custom-jfx-list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.custom-jfx-list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane{
+    -fx-background-color: rgb(102.0,153.0,102.0) ;
+}
+
+.custom-jfx-list-view{
+    -fx-background-insets: 0.0;
+    -fx-cell-horizontal-margin: 0.0;
+    -fx-cell-vertical-margin: 5.0;
+    -fx-expanded : true;
+    -fx-depth : 1;
+    /* important to hide the list change of height */
+    -fx-background-color:TRANSPARENT;
+}
+.custom-jfx-list-view .jfx-rippler {
+    -fx-rippler-fill : RED;
+}
+
+.custom-jfx-list-view1{
+    -fx-vertical-gap : 15.0;
+    -fx-pref-width: 150px;
+    -fx-background-color: transparent ;
+}
+
+.custom-jfx-list-view-icon {
+    -fx-text-fill: #5264AE;
+    -fx-padding: 0.0 10.0 0.0 5.0  ;
+    -fx-cursor: hand;
+}
+
+
+
+.custom-jfx-list-view .sublist-item {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1 0 1 0;
+}
+.custom-jfx-list-view .jfx-list-cell .sublist-header > .drop-icon{
+    -fx-background-color: GRAY;
+}
+.custom-jfx-list-view .jfx-list-cell:filled:hover .sublist-header > .drop-icon{
+    -fx-background-color: BLACK;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX Combo Box                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.combo-box-popup .list-view .jfx-list-cell .label {
+    -fx-text-fill: BLACK ;
+}
+.combo-box-popup .list-view .jfx-list-cell .custom-jfx-list-view-icon {
+    -fx-text-fill: #5264AE;
+    -fx-padding: 0.0 10.0 0.0 5.0  ;
+    -fx-cursor: hand;
+}
+.combo-box-popup .list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.combo-box-popup .list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
+    -fx-background-color: rgba(0.0,0.0,255.0,0.2);
+}
+.combo-box-popup .list-view .jfx-list-cell {
+    -fx-background-insets: 0.0 ;
+    -fx-text-fill: BLACK;
+}
+.combo-box-popup .list-view .jfx-list-cell:odd,
+.combo-box-popup .list-view .jfx-list-cell:even {
+    -fx-background-color:  WHITE;
+}
+.combo-box-popup .list-view .jfx-list-cell:filled:hover .label{
+    -fx-text-fill: black;
+}
+.combo-box-popup .list-view .jfx-list-cell:filled:hover .custom-jfx-list-view-icon {
+    -fx-text-fill: #5264AE;
+}
+.combo-box-popup .list-view .jfx-list-cell .jfx-rippler {
+    -fx-rippler-fill: #5264AE;
+}
+
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Decorator                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-decorator {
+    -fx-decorator-color: derive(rgb(102.0,153.0,102.0),-20%);
+}
+.jfx-decorator .jfx-decorator-buttons-container{
+    -fx-background-color:-fx-decorator-color;
+}
+.jfx-decorator .resize-border{
+    -fx-border-color:-fx-decorator-color;
+    -fx-border-width: 0 4 4 4;
+}
+
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Scroll Bar			                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-bar:vertical>.track-background, .scroll-bar:horizontal>.track-background{
+    -fx-background-color: #F1F1F1;
+    -fx-background-insets: 0.0;
+}
+
+.scroll-bar:vertical>.thumb, .scroll-bar:horizontal>.thumb {
+    -fx-background-color: #BCBCBC;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 1.0;
+}
+
+.scroll-bar>.increment-button, .scroll-bar>.decrement-button{
+    -fx-padding:5 2 5 2;
+}
+
+.scroll-bar>.increment-button, .scroll-bar>.decrement-button,.scroll-bar:hover>.increment-button, .scroll-bar:hover>.decrement-button{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar>.increment-button>.increment-arrow, .scroll-bar>.decrement-button>.decrement-arrow{
+    -fx-background-color: rgb(150.0, 150.0, 150.0);
+}
+.scroll-bar>.increment-button>.increment-arrow{
+    -fx-shape: "M298 426h428l-214 214z";
+}
+.scroll-bar>.decrement-button>.decrement-arrow{
+    -fx-shape: "M298 598l214-214 214 214h-428z";
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Scroll Pane			                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane:focused {
+    -fx-background-insets: 0;
+}
+
+.scroll-pane .corner {
+    -fx-background-insets: 0;
+}
+
+/*******************************************************************************
+*                                                                              *
+* Error Facade                                                                 *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-combo-box:error .combo-box-button-container {
+    -fx-border-color:#D34336;
+    -fx-border-width: 0 0 2 0;
+}
+
+.label.errorLabel {
+    -fx-text-fill : #D34336;
+    -fx-font-size: 0.75em;
+    -fx-font-weight: bold;
+}
+.errorIcon {
+    -fx-text-fill : #D34336;
+    -fx-font-size: 1.0em;
+}
+
+
+

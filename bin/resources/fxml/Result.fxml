@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ScrollPane?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane>
+            <top>
+                <Label styleClass="title-label" text="TP Intelligence Artificielle" BorderPane.alignment="CENTER"/>
+            </top>
+            <center>
+                <ScrollPane>
+                    <AnchorPane fx:id="ap" >
+                        <Label fx:id="mainLabel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font size="16" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </ScrollPane>
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" spacing="40">
+                    <children>
+                        <JFXButton fx:id="modifierButton" text="Modifier" styleClass="custom-jfx-button-raised" prefHeight="50" prefWidth="100"/>
+                        <JFXButton fx:id="retournerButton" text="Retourner" styleClass="custom-jfx-button-raised" prefHeight="50" prefWidth="100"/>
+                    </children>
+                    <padding>
+                        <Insets top="50" />
+                    </padding>
+                </HBox>
+            </bottom>
+            <padding>
+                <Insets left="50" right="50" top="50" bottom="50" />
+            </padding>
+        </BorderPane>
+    </children>
+</StackPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/core-8.0b8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/datafx-8.0b8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/flow-8.0b8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/fontawesomefx-8.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/javassist.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/javax.inject.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/jfoenix.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/jfxrt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/mysql-connector-java.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/retrolambda-2.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CEDRI/workspace/CSP/libs/rt.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

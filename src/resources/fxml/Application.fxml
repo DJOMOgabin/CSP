@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.cell.TextFieldListCell?>
+<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane>
+            <top>
+                <Label styleClass="title-label" text="TP Intelligence Artificielle" BorderPane.alignment="CENTER"/>
+            </top>
+            <center>
+                <VBox alignment="CENTER" spacing="30">
+                    <children>
+                        <VBox alignment="CENTER" maxWidth="400.0" spacing="10" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="20">
+                                    <children>
+                                        <Label text="Nombre de cable     : ">
+                                            <font>
+                                                <Font size="20.0"/>
+                                            </font>
+                                        </Label>
+                                        <JFXTextField fx:id="cableTextField" maxWidth="80" style="-fx-font-size: 20"/>
+                                        <JFXButton fx:id="cableDialogButton" buttonType="RAISED" mnemonicParsing="false"
+                                                   styleClass="custom-jfx-button-raised" text="..."/>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="20">
+                                    <children>
+                                        <Label text="Nombre de Rouleau : ">
+                                            <font>
+                                                <Font size="20.0"/>
+                                            </font>
+                                        </Label>
+                                        <JFXTextField fx:id="rouleauTextField" maxWidth="80" style="-fx-font-size: 20"/>
+                                        <JFXButton fx:id="rouleauDialogButton" buttonType="RAISED"
+                                                   mnemonicParsing="false" styleClass="custom-jfx-button-raised"
+                                                   text="..."/>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" spacing="20">
+                                    <children>
+                                        <Label text="Longueur de sertissage : ">
+                                            <font>
+                                                <Font size="20.0"/>
+                                            </font>
+                                        </Label>
+                                        <JFXTextField fx:id="longueurSertissageTextField" maxWidth="100" style="-fx-font-size: 20"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="20">
+                            <children>
+                                <HBox alignment="CENTER" maxWidth="350" style="-fx-border-style: solid; -fx-border-color: rgb(102.0,153.0,102.0); -fx-border-width: 0px 0px 5px 0px;">
+                                    <children>
+                                        <Label text="Algorithmes" >
+                                            <font>
+                                                <Font name="System Bold" size="20"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <VBox alignment="CENTER_LEFT" maxWidth="250" spacing="10">
+                                    <children>
+                                        <JFXRadioButton fx:id="srea" selected="true" text="Simple Retour En Arriere" style="-fx-font-size: 18">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="toggleGroup" />
+                                            </toggleGroup>
+                                        </JFXRadioButton>
+                                        <JFXRadioButton fx:id="tpe" selected="false" text="Tester Puis Enumerer (Filtrage Simple)" toggleGroup="$toggleGroup" style="-fx-font-size: 18" />
+                                        <JFXRadioButton fx:id="ept" selected="false" text="Tester Puis Enumerer (Filtrage Fort)" toggleGroup="$toggleGroup" style="-fx-font-size: 18" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" spacing="40">
+                    <children>
+                        <JFXButton fx:id="validerButton" text="Valider" styleClass="custom-jfx-button-raised" prefHeight="50" prefWidth="100"/>
+                    </children>
+                </HBox>
+            </bottom>
+            <StackPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </StackPane.margin>
+        </BorderPane>
+        <JFXDialog fx:id="cableDialog">
+            <content>
+                <StackPane>
+                    <children>
+                        <BorderPane>
+                            <top>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <Label styleClass="title-label" text="Entrer la longueur des cables">
+                                            <font>
+                                                <Font size="20.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </top>
+                            <center>
+                                <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: WHITE">
+                                    <FlowPane fx:id="cableFlowPane" vgap="20" hgap="20"
+                                              style="-fx-background-color: WHITE">
+                                        <padding>
+                                            <Insets top="20" left="20" right="20"/>
+                                        </padding>
+                                    </FlowPane>
+                                </ScrollPane>
+                            </center>
+                            <bottom>
+                                <HBox spacing="20" alignment="CENTER">
+                                    <children>
+                                        <JFXButton fx:id="cableAnnulerButton" buttonType="RAISED" text="Annuler"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="cableViderButton" buttonType="RAISED" text="Vider"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="cableRepeterButton" buttonType="RAISED" text="Repeter"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="cableGenererButton" buttonType="RAISED" text="Generer"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="cableValiderButton" buttonType="RAISED" text="Valider"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                    </children>
+                                    <padding>
+                                        <Insets top="30" bottom="30"/>
+                                    </padding>
+                                </HBox>
+                            </bottom>
+                        </BorderPane>
+                    </children>
+                </StackPane>
+            </content>
+        </JFXDialog>
+        <JFXDialog fx:id="rouleauDialog">
+            <content>
+                <StackPane>
+                    <children>
+                        <BorderPane>
+                            <top>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <Label styleClass="title-label" text="Entrer la longueur des rouleaux">
+                                            <font>
+                                                <Font size="20.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </top>
+                            <center>
+                                <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: WHITE">
+                                    <FlowPane fx:id="rouleauFlowPane" vgap="20" hgap="20"
+                                              style="-fx-background-color: WHITE">
+                                        <padding>
+                                            <Insets top="20" left="20" right="20"/>
+                                        </padding>
+                                    </FlowPane>
+                                </ScrollPane>
+                            </center>
+                            <bottom>
+                                <HBox spacing="20" alignment="CENTER">
+                                    <children>
+                                        <JFXButton fx:id="rouleauAnnulerButton" buttonType="RAISED" text="Annuler"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="rouleauViderButton" buttonType="RAISED" text="Vider"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="rouleauRepeterButton" buttonType="RAISED" text="Repeter"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="rouleauGenererButton" buttonType="RAISED" text="Generer"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="rouleauValiderButton" buttonType="RAISED" text="Valider"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                    </children>
+                                    <padding>
+                                        <Insets top="30" bottom="30"/>
+                                    </padding>
+                                </HBox>
+                            </bottom>
+                        </BorderPane>
+                    </children>
+                </StackPane>
+            </content>
+        </JFXDialog>
+        <JFXDialog fx:id="cableGenererDialog">
+            <content>
+                <StackPane>
+                    <children>
+                        <VBox alignment="CENTER" spacing="30">
+                            <children>
+                                <HBox spacing="40" alignment="CENTER">
+                                    <children>
+                                        <HBox spacing="5" alignment="CENTER">
+                                            <children>
+                                                <Label text="min : ">
+                                                    <font>
+                                                        <Font size="20"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="minCableGenerer" maxWidth="80" style="-fx-font-size: 20"/>
+                                            </children>
+                                        </HBox>
+                                        <HBox spacing="5" alignment="CENTER">
+                                            <children>
+                                                <Label text="max : ">
+                                                    <font>
+                                                        <Font size="20"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="maxCableGenerer" maxWidth="80" style="-fx-font-size: 20"/>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                                <HBox spacing="50" alignment="CENTER">
+                                    <children>
+                                        <JFXButton fx:id="cableGenererAnnuler" text="Annuler"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="cableGenererValider" text="Valider"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="20" bottom="20" left="20" right="20" />
+                    </padding>
+                </StackPane>
+            </content>
+        </JFXDialog>
+        <JFXDialog fx:id="rouleauGenererDialog">
+            <content>
+                <StackPane>
+                    <children>
+                        <VBox alignment="CENTER" spacing="30">
+                            <children>
+                                <HBox spacing="40" alignment="CENTER">
+                                    <children>
+                                        <HBox spacing="5" alignment="CENTER">
+                                            <children>
+                                                <Label text="min : ">
+                                                    <font>
+                                                        <Font size="20"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="minRouleauGenerer" maxWidth="80" style="-fx-font-size: 20"/>
+                                            </children>
+                                        </HBox>
+                                        <HBox spacing="5" alignment="CENTER">
+                                            <children>
+                                                <Label text="max : ">
+                                                    <font>
+                                                        <Font size="20"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="maxRouleauGenerer" maxWidth="80" style="-fx-font-size: 20"/>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                                <HBox spacing="50" alignment="CENTER">
+                                    <children>
+                                        <JFXButton fx:id="rouleauGenererAnnuler" text="Annuler"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                        <JFXButton fx:id="rouleauGenererValider" text="Valider"
+                                                   styleClass="custom-jfx-button-raised"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="20" bottom="20" left="20" right="20" />
+                    </padding>
+                </StackPane>
+            </content>
+        </JFXDialog>
+        <JFXDialog fx:id="errorDialog">
+            <JFXDialogLayout>
+                <heading>
+                    <Label fx:id="headingLabel" />
+                </heading>
+                <body>
+                    <Label fx:id="bodyLabel" />
+                </body>
+                <actions>
+                    <JFXButton fx:id="acceptButton" styleClass="dialog-accept" text="ACCEPT" />
+                </actions>
+            </JFXDialogLayout>
+        </JFXDialog>
+    </children>
+</StackPane>
